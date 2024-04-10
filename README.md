@@ -11,6 +11,9 @@ Continuando o projeto anterior (https://github.com/cc2632/projeto0-2024-1), vamo
 ## Bugs para correção e melhorias
 
 1. (1 ponto) Os valores de categoria e descrição estão com quebra de linha no final da string. Adicione o código necessário para que esta quebra de linha não seja armazenada
+    '''
+    tarefas[i].categoria[strlen(tarefas[i].categoria)-1] = '\0';
+    '''
 2. (1 ponto) O valor da prioridade não está limitado entre 1 e 10
 3. (1 ponto) Os erros não foram tratados na função main
 4. (1 ponto) Os tamanhos da categoria e descrição na função de criar tarefas e na descrição do struct estão com os valores definidos, mas não usam uma variável ou parâmetro para isso. Use o #define para mudar estes valores

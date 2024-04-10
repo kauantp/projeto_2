@@ -51,8 +51,10 @@ ERROS listar(Tarefa tarefas[], int *pos){
     for(int i=0; i<*pos; i++){
         printf("Pos: %d\t", i+1);
         printf("Prioridade: %d\t", tarefas[i].prioridade);
-        printf("Categoria: %s\t", tarefas[i].categoria);
-        printf("Descricao: %s\n", tarefas[i].descricao);
+        tarefas[i].categoria[strlen(tarefas[i].categoria)-1] = '\0';
+        printf("Categoria: %s", tarefas[i].categoria);
+        printf("\t Descricao: %s\t", tarefas[i].descricao);
+        printf("\n");
     }
 
     return OK;
